@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class item extends Model
 {
-    protected $fillable = [ // Atribut yang dapat diisi
+    protected $fillable = [ // agar Atribut dapat diisi
         'name',
         'description',
     ];
