@@ -7,12 +7,20 @@ use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PhotoController;
-Route::resource('photos', PhotoController::class);
-Route::resource('photos', PhotoController::class)->only([ 'index', 'show'
-]);
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+// Route::get('/greeting', function () {
+//     return view('blog.hello', ['name' => 'Rizky']);
+//     });
+    
+// Route::get('/greeting', function () {
+//     return view('hello', ['name' => 'Rizky']);
+// }); 
+// Route::resource('photos', PhotoController::class);
+// Route::resource('photos', PhotoController::class)->only([ 'index', 'show'
+// ]);
 
-Route::resource('photos', PhotoController::class)->except([ 'create', 'store', 'update', 'destroy'
-]);
+// Route::resource('photos', PhotoController::class)->except([ 'create', 'store', 'update', 'destroy'
+// ]);
 
 // Route::get('/', [PageController::class,'index']);
 // Route::get('/about', [PageController::class,'about']);
